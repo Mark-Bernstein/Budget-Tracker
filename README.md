@@ -22,3 +22,8 @@ Giving users a fast and easy way to track their money is important, but allowing
 GIVEN a user is on Budget App without an internet connection
 WHEN the user inputs a withdrawal or deposit
 THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+
+Deployed link: https://ancient-sands-09708.herokuapp.com/
+
+## Below is a screenshot of the loaded homepage of the app:
+![Budget Tracker App Screenshot](/budgetTrackerScreenshot.JPG)
