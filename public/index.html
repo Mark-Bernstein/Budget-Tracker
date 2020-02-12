@@ -20,18 +20,18 @@
     </div>
 
     <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+      <input type="text" id="transaction-name" placeholder="Name of transaction" />
+      <input type="number" min="0" id="transaction-amount" placeholder="Transaction amount" />
       <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
       <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
+      <p class="error" style="color:red; font-weight:bold;"> </p>
     </div>
 
     <div class="transactions">
       <table>
         <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
+          <th id="transaction-text">Transaction</th>
+          <th id="amount-text">Amount</th>
         </thead>
         <tbody id="tbody">
           
@@ -45,5 +45,14 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="db.js"></script>
   <script src="index.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
